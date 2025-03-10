@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation slider - 2</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="assets/1.jpg" type="image/x-icon" />
+  </head>
+  <body class="flex justify-center items-center h-screen bg-gray-100">
+    <div
+      class="absolute bg top-0 right-0 w-full h-screen bg-[url('assets/1.jpg')] bg-cover bg-center blur-[10px] z-[-1]"
+    ></div>
+    <main
+      class="w-full flex justify-center items-center relative overflow-hidden"
+    >
+      <div
+        class="md:w-[700px] w-[500px] h-[300px] shadow-[0px_5px_20px_0px_black] relative bg-gray-100"
+      >
+        <!-- Replace with Last img url -->
+        <img
+          src="assets/5.jpg"
+          class="absolute last-img w-full h-full object-cover shadow-[0px_5px_20px_0px_black] object-center transition-all blur-[5px] duration-300 translate-x-[-100%]"
+          alt="1"
+        />
+
+        <!-- Start -->
+        <!-- 1 -->
+        <div
+          class="absolute slides w-full h-full object-cover object-center transition-all duration-300 top-0 left-0"
+        >
+          <img
+            src="assets/1.jpg"
+            alt="1"
+            class="w-full h-full object-cover object-center"
+          />
+          <div
+            class="absolute bottom-4 left-4 text-white text-lg font-semibold drop-shadow-md bg-black/50 px-3 py-1 rounded"
+          >
+            “Let yourself be silently drawn by the stronger pull of what you
+            really love.”
+            <span class="text-sm">– Rumi</span>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div
+          class="absolute slides w-full h-full object-cover object-center transition-all duration-300 top-0 left-0"
+        >
+          <img
+            src="assets/2.jpg"
+            alt="1"
+            class="w-full h-full object-cover object-center"
+          />
+          <div
+            class="absolute bottom-4 left-4 text-white text-lg font-semibold drop-shadow-md bg-black/50 px-3 py-1 rounded"
+          >
+            “The wound is the place where the Light enters you.”
+            <span class="text-sm">– Rumi</span>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div
+          class="absolute slides w-full h-full object-cover object-center transition-all duration-300 top-0 left-0"
+        >
+          <img
+            src="assets/3.jpg"
+            alt="1"
+            class="w-full h-full object-cover object-center"
+          />
+          <div
+            class="absolute bottom-4 left-4 text-white text-lg font-semibold drop-shadow-md bg-black/50 px-3 py-1 rounded"
+          >
+            “Yesterday I was clever, so I wanted to change the world. Today I am
+            wise, so I am changing myself.”
+            <span class="text-sm">– Rumi</span>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div
+          class="absolute slides w-full h-full object-cover object-center transition-all duration-300 top-0 left-0"
+        >
+          <img
+            src="assets/4.jpg"
+            alt="1"
+            class="w-full h-full object-cover object-center"
+          />
+          <div
+            class="absolute bottom-4 left-4 text-white text-lg font-semibold drop-shadow-md bg-black/50 px-3 py-1 rounded"
+          >
+            “As you start to walk on the way, the way appears.”
+            <span class="text-sm">– Rumi</span>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div
+          class="absolute slides absolute w-full h-full object-cover object-center transition-all duration-300 top-0 left-0"
+        >
+          <img
+            src="assets/5.jpg"
+            alt="1"
+            class="w-full h-full object-cover object-center"
+          />
+          <div
+            class="absolute bottom-4 left-4 text-white text-lg font-semibold drop-shadow-md bg-black/50 px-3 py-1 rounded"
+          >
+            “Only from the heart can you touch the sky.”
+            <span class="text-sm">– Rumi</span>
+          </div>
+        </div>
+        <!-- End -->
+        <!-- Replace with first img url -->
+        <img
+          src="assets/1.jpg"
+          class="absolute w-full first-img h-full object-cover object-center transition-all blur-[5px] duration-300 translate-x-[200%]"
+          alt="1"
+        />
+      </div>
+    </main>
+
+    <div
+      class="absolute bottom-[calc(50%-240px)] left-1/2 -translate-x-1/2 flex gap-4"
+    >
+      <button
+        id="prev"
+        class="cursor-pointer bg-[#666666] rounded-full p-2 hover:scale-125 transition-all duration-300 hover:translate-x-[-10px] hover:shadow-[0px_5px_20px_0px_black]"
+        title="prev"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="30px"
+          viewBox="0 -960 960 960"
+          width="30px"
+          fill="white"
+        >
+          <path
+            d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"
+          />
+        </svg>
+      </button>
+      <button
+        id="next"
+        class="cursor-pointer bg-[#666666] rounded-full p-2 hover:scale-125 transition-all duration-300 hover:translate-x-[10px] hover:shadow-[0px_5px_20px_0px_black]"
+        title="next"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="30px"
+          viewBox="0 -960 960 960"
+          width="30px"
+          fill="white"
+        >
+          <path
+            d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <script>
+      const slides = document.querySelectorAll(".slides");
+      const bg = document.querySelector(".bg");
+
+      const len = slides.length;
+
+      let count = 0;
+      let isAnimating = false;
+      const prev = document.querySelector("#prev");
+      const next = document.querySelector("#next");
+
+      // Position the slides in each container
+      slides.forEach((slide, index) => {
+        slide.style.left = `${index * 100}%`;
+      });
+
+      const animation = () => {
+        if (count > 0) {
+          document
+            .querySelector(".last-img")
+            .classList.remove("translate-x-[-100%]");
+          document
+            .querySelector(".last-img")
+            .classList.add("translate-x-[-200%]");
+        } else {
+          document
+            .querySelector(".last-img")
+            .classList.remove("translate-x-[-200%]");
+          document
+            .querySelector(".last-img")
+            .classList.add("translate-x-[-100%]");
+        }
+
+        // Adjust the background image IF You add more img then increase this if and else condition
+
+        if (count === 0) {
+          bg.style.backgroundImage = `url('assets/1.jpg')`;
+        } else if (count === 1) {
+          bg.style.backgroundImage = `url('assets/2.jpg')`;
+        } else if (count === 2) {
+          bg.style.backgroundImage = `url('assets/3.jpg')`;
+        } else if (count === 3) {
+          bg.style.backgroundImage = `url('assets/4.jpg')`;
+        } else if (count === 4) {
+          bg.style.backgroundImage = `url('assets/5.jpg')`;
+        }
+
+        if (count === len - 1) {
+          document
+            .querySelector(".first-img")
+            .classList.remove("translate-x-[200%]");
+          document
+            .querySelector(".first-img")
+            .classList.add("translate-x-[100%]");
+        } else {
+          document
+            .querySelector(".first-img")
+            .classList.remove("translate-x-[100%]");
+          document
+            .querySelector(".first-img")
+            .classList.add("translate-x-[200%]");
+        }
+        // Update the main slider:
+        slides.forEach((slide) => {
+          slide.style.transform = `translateX(-${count * 100}%)`;
+        });
+        // Update the blurred previews:
+        slides.forEach((slide, index) => {
+          if (index === count) {
+            slide.classList.add("active");
+            slide.classList.remove("scale-95", "blur-[5px]");
+          } else {
+            slide.classList.remove("active");
+            slide.classList.add("scale-95", "blur-[5px]");
+          }
+        });
+      };
+
+      prev.addEventListener("click", () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        // Decrement with wrap-around
+        if (count === 0) {
+          count = len - 1;
+        } else {
+          count--;
+        }
+        animation();
+        setTimeout(() => {
+          isAnimating = false;
+        }, 310); // slightly longer than the 300ms transition
+      });
+
+      next.addEventListener("click", () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        // Increment with wrap-around
+        if (count === len - 1) {
+          count = 0;
+        } else {
+          count++;
+        }
+        animation();
+        setTimeout(() => {
+          isAnimating = false;
+        }, 310);
+      });
+    </script>
+  </body>
+</html>
